@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--<html manifest="cache.appcache">  --TODO: What is this for?-->
+
+<head>
+<title>NYSL Game Schedule App</title>
+<meta charset="utf-8">
+<!--For Android's default browser and Android Chrome -->
+<link rel="shortcut icon" sizes="128x128" href="/images/soccer_ball_app_icon.png"> 
+<link rel="shortcut icon" sizes="128x128" href="/images/nysl_app-152.png"> 
+<link rel="shortcut icon" sizes="196x196" href="/images/nysl_app-152.png">   
+<!-- Separate icons for Apple and Android --> 
+<link rel="apple-touch-icon" href="/images/nysl_app-152.png">  
+<link rel="apple-touch-icon" sizes="76x76" href="/images/nysl_app-152.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/nysl_app-152.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/nysl_app-152.png">
+<!--This orders iPhone Safari (not iPad) to hide address bar so app looks like a native app. -->
+<meta name="apple-mobile-web-app-capable" content="yes">  
+<!--what Chrome wants for both Android and iOS wants to hide the address bar.-->
+<meta name="mobile-web-app-capable" content="yes">  
+ <!--orders all browsers to show the contents with the intended size and not auto-resize (or auto-fit) the page.-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui"> 
+<!--fixes a glitch in iOS v7.0 Safari for iPhone.-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- CSS reset-->
+<link rel="stylesheet" type="text/css" href="CSS/normalize.css">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<!-- my CSS -->
+<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+</head>
+
+
+<body>
+
+	<div class="header">
+		<navbar>
+			<a href=""><button class="back_button" type="type"><i class="fa fa-arrow-left back_icon"></i></button></a>
+			<h1>NYSL</h1>
+			<a href="index.html"><button class="home_button" type="type"><i class="fa fa-home home_icon"></i></button></a>
+		</navbar>
+
+		<header class="home">
+			<img class="logo" src= "images/app_logo.png" alt="NYSL Logo">
+		</header>
+
+		<div class="title">
+			<h2>TEAMS</h2>
+		</div>
+	</div>
+	
+	<div class="mainContent">
+		<div class="buttonGroup">
+			<div class="buttonRow">
+				<a href="games_by_team.html"><button class="sixButtons" type="button"><i class="fa fa-shield button_icons"></i><h3>TEAM 1</h3></button></a>
+
+				<a href="games_by_team.html"><button class="sixButtons" type="button"><i class="fa fa-shield button_icons"></i><h3>TEAM 2</h3></button></a>
+			</div>
+
+			<div class="buttonRow">
+				<a href="games_by_team.html"><button class="sixButtons" type="button"><i class="fa fa-shield button_icons"></i><h3>TEAM 3</h3></button></a>
+		
+				<a href="games_by_team.html"><button class="sixButtons" type="button"><i class="fa fa-shield button_icons"></i><h3>TEAM 4</h3></button></a>
+			</div>
+			
+			<div class="buttonRow">
+				<a href="games_by_team.html"><button class="sixButtons" type="button"><i class="fa fa-shield button_icons"></i><h3>TEAM 5</h3></button></a>
+
+				<a href="games_by_team.html"><button class="sixButtons" type="button"><i class="fa fa-shield button_icons"></i><h3>TEAM 6</h3></button></a>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Font Awesome -->
+<script src="https://use.fontawesome.com/b55d83a6c7.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script src="JS/main.js"></script>
+
+</body>
+</html>

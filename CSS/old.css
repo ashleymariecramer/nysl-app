@@ -1,0 +1,302 @@
+/* All setting are optimized for phone: 450px wide or less */
+body{
+	background-image: url("/images/blurred_grass_background.png");
+	color: white;
+	font-family: "Raleway";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+		/* Raleway|Graduate|Lato */ 
+}
+
+header {
+	margin-top: 2em;
+	margin-bottom: 1em;
+}
+
+.header{
+	height: 240px;
+}
+
+.logo{
+	width: 100%;
+	margin-top: -1em;
+}
+
+navbar{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+.back_button{
+	color: white;
+	font-size: 3.5em;
+	background-color: transparent;ç
+	border: none;
+}
+
+.home_button{
+	color: white;
+	font-size: 3.5em;
+	background-color: transparent;
+	border: none;
+}
+
+.title{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+}
+
+h1{
+	text-align: center;
+	font-size: 4em;
+	margin: 0;
+	font-family: "Lato";
+}
+
+h2{
+	text-align: center;
+	font-size: 2.5em;
+	margin: 0;
+	font-family: "Lato";
+}
+
+h3{
+	font-size: 0.95em;
+	margin: 10px 0px 2px 0px;
+}
+
+h4 {
+	font-family: 'Lato';
+	font-size: 1.5em;
+	margin: 5px;
+}
+
+p{
+	font-size: 1.2em;
+	padding: 0px 15px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.mainContent{
+	height: 500px;
+	width: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.content {
+	margin-top: 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
+}
+
+.buttonGroup{
+	display: flex;
+	flex-direction: column;
+}
+
+.buttonRow{
+	display: inline-flex;
+	justify-content: space-between;
+	align-content: stretch;
+}
+
+.fourButtons { 
+	border: solid 3px white;
+	color: white;
+	border-radius: 20px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 150px;
+	width: 150px;
+	margin: 15px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.sixButtons{
+	border: solid 3px white;
+	color: white;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 100px;
+	width: 150px;
+	margin: 15px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.singleButton{
+	border: solid 3px white;
+	color: white;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 80px;
+	width: 200px;
+	margin: 30px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+.fourButtons > i {
+	font-size: 2em;
+}  
+
+.sixButtons > i {
+	font-size: 1.5em;
+}  
+
+.singleButton > i {
+	font-size: 2em;
+}
+
+.mainContentOverFlow{
+	height: 500px;
+	width: 400px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+}
+
+.overflowContent{
+	margin-top: 2em;
+	overflow: scroll; 
+	height: 400px;
+}
+
+.text{
+	text-align: center;
+}
+
+.mainMap{
+	width: 90%;
+	height: 250px;
+	display: flex;
+	padding: 10px;
+}
+
+table{
+	font-family: 'Lato';
+	font-size: 2em;
+	color: hotpink;
+}
+
+td{
+	padding: 10px 25px;
+}
+
+th{
+	padding: 10px 25px;
+	text-align: left;
+}
+
+tr:nth-child(odd) {
+	background-color: rgba(0,0,0,.5)
+}
+
+.chat{
+	width: 90%;
+	height: 200px;
+	overflow:auto; 
+	background-color: rgba(0,0,0,.5);
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+input{
+	width: 300px;
+	height: 30px;
+	margin: 5px;
+}
+
+.post{
+	border: solid 3px white;
+	color: white;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 40px;
+	width: 150px;
+	margin: 15px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+}
+
+/* Media queries for smaller smartphones */
+@media (max-width:374px) {
+	.header{height: 225px;}
+	.mainContent{height: 350px; width: 300px;}
+	.fourButtons {height: 130px; width: 130px; margin: 5px;}
+	.sixButtons {height: 90px; width: 150px; margin: 5px;}
+	.singleButton {height: 60px; width: 200px; margin: 30px 0px;}
+	.mainMap{height: 200px;}
+	h2 {font-size: 28px;
+	}
+	h3{margin: 5px;}
+	h4{font-size: 18px; margin: 5px;}
+	p{font-size: 14px; padding: 0px 15px;}
+	.content {margin-top: -0.5em;}
+	table{font-size: 1.5em;}
+	/*.mainMap{width: 100%; height: 300px;} */
+	.chat{width: 280px; height: 150px;}
+	input{width: 274px; height: 20px;}
+	.post{border-radius: 10px; height: 30px; margin: 2px;}
+	.overflowContent{height: 300px;}
+}
+
+/* Media queries for tablets */
+@media (min-width:480px) {
+	.header{height: 350px;}
+	.mainContent{height: 600px; width: 600px;}
+	.fourButtons {height: 250px; width: 250px; margin: 25px;}
+	.sixButtons {height: 150px; width: 250px; margin: 15px 15px;}
+	.singleButton {height: 100px; width: 250px; margin: 30px 0px;}
+	h1{font-size: 5em; margin: 0;}
+	h2{font-size: 4em; margin: 0;}
+	h3{font-size: 2em; margin: 10px;}
+	h4{font-size: 2em; margin: 10px;}
+	p{font-size: 1.8em; padding: 0px 15px;}
+	.fourButtons > i {font-size: 3em;}  
+	.sixButtons > i {font-size: 2.5em;}  
+	table{font-size: 3em;}
+	.mainMap{width: 100%; height: 300px;}
+	.chat{width: 500px; height: 280px;}
+	input{ width: 500px; height: 50px;
+	margin: 5px;}
+	.post{border-radius: 15px; height: 90px;
+	width: 150px;}
+	.overflowContent{height: 580px;}
+}

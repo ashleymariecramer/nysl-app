@@ -1,0 +1,562 @@
+body{
+	background-image: url("/images/blurred_grass_background.png");
+	color: white;
+	font-family: "Raleway";
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+		/* Raleway|Graduate|Lato */ 
+}
+
+header {
+	margin-bottom: 0px;
+}
+
+.header{
+	height: 120px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex; 
+	-webkit-box-orient: vertical; 
+	-webkit-box-direction: normal; 
+	    -ms-flex-direction: column; 
+	        flex-direction: column; 
+	-webkit-box-align: center; 
+	    -ms-flex-align: center; 
+	        align-items: center;
+}
+
+.logo{
+	width: 50%;
+	margin: 0 25% ;
+}
+
+navbar{
+	height: 100px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
+}
+
+.home{
+	background-color: transparent;
+	padding: 0;
+	margin-top; 100px;
+}
+
+.back_button{
+	color: white;
+	margin-top: 5px;
+	margin-right: 40px;
+	font-size: 35px;
+	background-color: transparent;
+	border: none;
+}
+
+.home_button{
+	color: white;
+	margin-top: 5px;
+	margin-left: 40px;
+	font-size: 35px;
+	background-color: transparent;
+	border: none;
+}
+
+.title{
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+}
+
+h1{
+	text-align: center;
+	font-size: 4em;
+	margin: 0;
+	font-family: "Lato";
+}
+
+h2{
+	text-align: center;
+	font-size: 2.5em;
+	margin: 0;
+	font-family: "Lato";
+}
+
+h3{
+	font-size: 14px;
+	margin: 10px 0px 10px 0px;
+}
+
+h4 {
+	font-family: 'Lato';
+	font-size: 20px;
+	margin: 5px;
+}
+
+h5{
+	font-size: 20px;
+	font-family: "Raleway";
+	margin: 0px;
+}
+
+p{
+	font-size: 1.2em;
+	padding: 0px 15px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.mainContent{
+	height: 450px;
+	width: 400px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.content {
+	margin-top: 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+}
+
+.buttonGroup{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.buttonRow{
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-line-pack: stretch;
+	    align-content: stretch;
+}
+
+.fourButtons { 
+	border: solid 3px white;
+	color: white;
+	border-radius: 20px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 150px;
+	width: 150px;
+	margin: 15px 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+.sixButtons{
+	border: solid 3px white;
+	color: white;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 100px;
+	width: 150px;
+	margin: 15px 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+.singleButton{
+	border: solid 3px white;
+	color: white;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 100px;
+	width: 200px;
+	margin: 30px 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+.fourButtons > i {
+	font-size: 2em;
+}  
+
+.sixButtons > i {
+	font-size: 1.5em;
+}  
+
+.singleButton > i {
+	font-size: 2em;
+}
+
+.gameList{
+	font-family: 'Lato';
+	font-size: 2em;
+	text-align: left;
+}
+
+.gameSummaryButton{
+	color: white;
+	border: none; 
+	background-color: transparent;
+	padding: 2px 0px;
+	height: 30px;
+	width: 320px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+.gameSummaryButton:nth-of-type(odd)  {
+	background-color: rgba(0,0,0,0.5);
+} 
+
+.mainContentOverFlow{
+	height: 500px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.overflowContent{
+	margin-top: 2em;
+	overflow: scroll; 
+	height: 400px;
+}
+
+.text{
+	text-align: center;
+}
+
+.mainMap{
+	width: 90%;
+	height: 250px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 10px;
+}
+
+.chat{
+	width: 90%;
+	height: 200px;
+	overflow:auto; 
+	background-color: rgba(0,0,0,.5);
+}
+
+form{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+input{
+	width: 300px;
+	height: 30px;
+	margin: 5px;
+}
+
+.post{
+	border: solid 3px white;
+	color: white;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 40px;
+	width: 150px;
+	margin: 15px 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+#gamesLandscape{
+	width: 100%;
+}
+
+.splitScreen {
+	margin-top: 5px;
+	width: 100%;
+	height: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+}
+
+.halfScreen {
+	width: 50%;
+	height: 250px;
+	margin-top: 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;	
+}
+
+.mainContentOverFlowSplit{
+	margin-top: 10px;
+	height: 160px;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+
+.overflowContentSplit{
+	margin-top: 5px;
+	overflow: scroll; 
+	height: 100%;
+}
+
+.mapSplit{
+	width: 100%;
+	height: 200px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 0px;
+}
+
+.singleButtonSplit{
+	border: solid 3px white;
+	color: white;
+	border-radius: 10px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 0px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 35px;
+	width: 50%;
+	margin: 10px 25% 0px 25%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+
+/* Media queries for smaller smartphones */
+@media (max-width:374px) {
+	.header{height: 100px;}
+	.mainContent{height: 350px; width: 300px;}
+	.fourButtons {height: 130px; width: 130px; margin: 5px;}
+	.sixButtons {height: 90px; width: 150px; margin: 5px;}
+	.singleButton {height: 80px; width: 200px; margin: 30px 0px;}
+	.mainMap{height: 200px;}
+	h1 {font-size: 2.5em;}
+	.back_button{ font-size: 2.5em;}
+	.home_button{ font-size: 2.5em;}
+	h2 {font-size: 28px;}
+	h3{margin: 5px;}
+	h4{font-size: 12px; margin: 0px;}
+	h5{font-size: 20px; margin: 0px;}
+	p{font-size: 14px; padding: 0px 15px;}
+	.content {margin-top: -0.5em;}
+	table{font-size: 1.5em;}
+	/*.mainMap{width: 100%; height: 300px;} */
+	.chat{width: 280px; height: 150px;}
+	input{width: 274px; height: 20px;}
+	.post{border-radius: 10px; height: 30px; margin: 2px;}
+	.overflowContent{height: 300px;}
+	.home{width: 100%;}
+}
+
+/* Media queries for tablets */
+@media (min-width:480px) {
+	.header{height: 280px;}
+	.mainContent{height: 600px; width: 600px;}
+	.fourButtons {height: 250px; width: 250px; margin: 25px;}
+	.sixButtons {height: 150px; width: 250px; margin: 15px 15px;}
+	.singleButton {height: 120px; width: 250px; margin: 30px 0px;}
+	h1{font-size: 5em; margin: 0;}
+	h2{font-size: 4em; margin: 0;}
+	h3{font-size: 2em; margin: 10px;}
+	h4{font-size: 10px; margin: 10px;}
+	p{font-size: 1.8em; padding: 0px 15px;}
+	.fourButtons > i {font-size: 3em;}  
+	.sixButtons > i {font-size: 2.5em;} 
+	table{font-size: 3em;}
+	.mainMap{width: 100%; height: 300px;}
+	.chat{width: 500px; height: 280px;}
+	input{ width: 500px; height: 50px;
+	margin: 5px;}
+	.post{border-radius: 15px; height: 90px;
+	width: 150px;}
+	.overflowContent{height: 580px;}
+}
+
+/* Media queries for landscape on smartphones only */
+@media (max-height:480px) and (orientation:landscape){
+	h1{font-size: 30px;}
+	h2{font-size: 30px;}
+	h3{font-size: 20px; padding: 0px;}
+	h4{font-size: 16px; margin: 0px;}
+	h5{font-size: 20px; padding:0px;}
+	p{font-size: 18px;}
+	header {margin-top: 0.5em; margin-bottom: 0em;}
+	navbar{height: 40px;}
+  .header {width: 600px; height: 80px;}
+	.back_button{ font-size: 30px; }
+	.home_button{ font-size: 30px; }
+	.logo{height: auto; width: 40%; margin-top: -1em; margin-left:30%; margin-right:30%;}
+	button.gameSummaryButton{width: 240px;}
+	.mainContentOverFlowSplit{height: 220px; width: 50%}
+	.overflowContentSplit{ margin-top: 0em; height: 200px;}
+	.splitScreen{margin-top: 20px;}
+	.singleButtonSplit{width: 50%;}
+}
+
+
