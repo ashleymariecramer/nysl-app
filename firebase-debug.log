@@ -1,0 +1,26 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.2.0
+[debug] Platform:     darwin
+[debug] Node Version: v6.9.1
+[debug] Time:         Sun Nov 27 2016 13:00:18 GMT+0100 (CET)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/nysl-game-app 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/nysl-game-app/tokens 
+[debug] <<< HTTP RESPONSE 200
+[debug] Error: Firebase.authWithCustomToken failed: First argument must be a valid credential (a string).
+    at Error (native)
+    at ng (/usr/local/lib/node_modules/firebase-tools/node_modules/firebase/lib/firebase-node.js:129:313)
+    at X.gg (/usr/local/lib/node_modules/firebase-tools/node_modules/firebase/lib/firebase-node.js:266:131)
+    at /usr/local/lib/node_modules/firebase-tools/lib/acquireRefs.js:14:19
+    at initializePromise (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:588:5)
+    at new Promise (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:1076:31)
+    at /usr/local/lib/node_modules/firebase-tools/lib/acquireRefs.js:12:12
+    at tryCatch (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:538:12)
+    at invokeCallback (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:553:13)
+    at publish (/usr/local/lib/node_modules/firebase-tools/node_modules/rsvp/dist/rsvp.js:521:7)
+[error] 
+[error] Error: An unexpected error has occurred.
