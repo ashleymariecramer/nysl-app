@@ -44,15 +44,16 @@ function showNextPage(){
 								}
 			} 
 			else {  //if no last page in history show the home page
-					if (allPages.length == 0){
+					console.log(allPages);
+					if (allPages[0] === "home") {
 							$("#home").show();
-					} // need to remove current page from the list of all pages
+					} 
 					else{
-						if (allPages[0] = window.location.hash){
+						if (allPages[0] = window.location.hash){ //remove current page from allPages
 							allPages.splice(0,1);
 							}
-						$('#' + allPages[0]).show();
-						allPages.splice(0,1);
+						$('#' + allPages[0]).show(); //show last page
+						allPages.splice(0,1); // remove last page
 				}
 			}
 		});
