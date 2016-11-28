@@ -14,7 +14,7 @@ $(function(){
 
 
 function loadMap(id){	
-    $("#"+ id).append('<iframe src="https://www.google.com/maps/d/embed?mid=1q5qLNyhgmVQsisCQrJQKGSAgKzY&output=embed" width="100%" height="100%"></iframe>'); 
+    $("#"+ id).html('<iframe src="https://www.google.com/maps/d/embed?mid=1q5qLNyhgmVQsisCQrJQKGSAgKzY&output=embed" width="100%" height="100%"></iframe>'); 
 }
 
 function setInitialPage(){
@@ -24,11 +24,13 @@ function setInitialPage(){
 
 function showNextPage(){
 		var allPages = ["home"];
+		var name = "home";
 		$("button").click(function(){	
 			$(".page").hide();
 			if (this.name != "back") {  // need to exclude back button as this should not go to '#back'
 				var name = this.name;
-				allPages.push(name);
+				allPages.unshift(name);
+				console.log(allPages);
 				window.location.hash = name; // this adds the location hash to the url
 				$('#' + name).show();
 				if (name === "gameInfo") {
@@ -41,24 +43,23 @@ function showNextPage(){
 										loadMap("map3");
 								}
 			} 
-			else {
-					var history = removeCurrentPageFromHistory(allPages);
-				  var last = history.splice(-1);
-					$('#' + last).show();
+			else {  //if no last page in history show the home page
+					if (allPages.length == 0){
+							$("#home").show();
+					} // need to remove current page from the list of all pages
+					else{
+						if (allPages[0] = window.location.hash){
+							allPages.splice(0,1);
+							}
+						$('#' + allPages[0]).show();
+						allPages.splice(0,1);
+				}
 			}
 		});
 };
 
 
-function removeCurrentPageFromHistory(allPages){
-	var lastPage = '#' + allPages[allPages.length-1];
-	var currentPage = window.location.hash;
-	if (lastPage === currentPage){
-		allPages.splice(-1);
-	}
-	var history = allPages;
-	return history;
-}
+
 
 function showLoggedInViews(){
 		$('.loggedOut').hide();
