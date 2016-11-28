@@ -1,19 +1,17 @@
+// Grouped functions 
 
 $(function(){
-	//goBack();
 	setInitialPage();
 	showNextPage();
+	//showLoggedOutViews();
+	showLoggedInViews();
+	
+	
 });
 
 
-/* function goBack(arr){
-		$('#back_button').on('click', function(){
-		var lastPage = window.history.back();
-		$(".page").hide();
-		$('lastPage').show();	
-		
-	});
-} */
+// Individual functions
+
 
 function loadMap(id){	
     $("#"+ id).append('<iframe src="https://www.google.com/maps/d/embed?mid=1q5qLNyhgmVQsisCQrJQKGSAgKzY&output=embed" width="100%" height="100%"></iframe>'); 
@@ -21,9 +19,7 @@ function loadMap(id){
 
 function setInitialPage(){
 	$(".page").hide();
-	//$("#home").show();
-	$("#nextGames").show();
-	loadMap("map3");
+	$("#home").show();
 };
 
 function showNextPage(){
@@ -64,8 +60,32 @@ function removeCurrentPageFromHistory(allPages){
 	return history;
 }
 
+function showLoggedInViews(){
+		$('.loggedOut').hide();
+		$('.loggedIn').show();
+}
+
+function showLoggedOutViews(){
+		$('.loggedIn').hide();
+		$('.loggedOut').show();
+}
+
+
+/* OLD CODE
+// back buttom for multiple page websites
+function goBack(arr){
+		$('#back_button').on('click', function(){
+		var lastPage = window.history.back();
+		$(".page").hide();
+		$('lastPage').show();	
+		
+	});
+} 
+
+
 /*function goBack(history){
 	var last = history.splice(-1)
 	$('#' + last).show();
 }
- */
+
+*/

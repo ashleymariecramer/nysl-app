@@ -1,5 +1,5 @@
 body{
-	background-image: url("/images/blurred_grass_background.png");
+	background-image: url("/public/images/blurred_grass_background.png");
 	color: white;
 	font-family: "Raleway";
 	display: -webkit-box;
@@ -48,7 +48,7 @@ navbar{
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-pack: distribute;
-	    justify-content: space-around;
+	    justify-content: space-between;
 }
 
 .home{
@@ -59,8 +59,8 @@ navbar{
 
 .back_button{
 	color: white;
-	margin-top: 5px;
-	margin-right: 40px;
+	padding: 0px 10px;
+	margin-top: 10px;
 	font-size: 35px;
 	background-color: transparent;
 	border: none;
@@ -68,13 +68,24 @@ navbar{
 
 .home_button{
 	color: white;
-	margin-top: 5px;
-	margin-left: 40px;
+	padding: 0px 10px;
+	margin-top: 10px;
+	margin-left: -30px;
 	font-size: 35px;
 	background-color: transparent;
 	border: none;
 }
 
+.signin_button{
+	color: white;
+	padding: 0px 10px;
+	margin-top: 10px;
+	margin-left: 45px;
+	margin-right: 10px;
+	font-size: 35px;
+	background-color: transparent;
+	border: none;
+}
 .title{
 	background-color: rgba(0,0,0,0.5);
 	width: 100%;
@@ -82,8 +93,8 @@ navbar{
 
 h1{
 	text-align: center;
-	font-size: 4em;
-	margin: 0;
+	font-size: 3.5em;
+	margin-top: 10px;
 	font-family: "Lato";
 }
 
@@ -353,6 +364,28 @@ form{
 	        align-items: center;
 }
 
+.form-group{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.loginButtons{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
 input{
 	width: 300px;
 	height: 30px;
@@ -368,6 +401,66 @@ input{
 	box-shadow: 0 10px 6px -6px #333;
 	height: 40px;
 	width: 150px;
+	margin: 15px 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+.login{
+	border: solid 3px white;
+	color: white;
+	border-radius: 15px;
+	background-color: rgba(0,0,0,0.25);
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 40px;
+	width: 100px;
+	margin: 15px 15px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-ms-flex-line-pack: distribute;
+	    align-content: space-around;
+}
+
+.message{
+	width: 80%; 
+	text-align: center;
+}
+
+
+.signup{
+	border: solid 3px white;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 15px;
+	color: black;
+	padding: 5px;
+	box-shadow: 0 10px 6px -6px #333;
+	height: 40px;
+	width: 100px;
 	margin: 15px 15px;
 	display: -webkit-box;
 	display: -ms-flexbox;

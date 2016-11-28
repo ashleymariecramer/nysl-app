@@ -1,0 +1,165 @@
+{ "locations":[
+	{
+		"id": "location1",
+		"name": "AJ Katzenmaier",
+		"address": "24 W Walton St, Chicago, IL 60610",
+		"map": "https://www.google.com/maps/place/24+W+Walton+St,+Chicago,+IL+60610/@41.9002367,-87.6312604,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34e07f6bac3:0x68a82e5d59952c86!8m2!3d41.9002367!4d-87.6290717"
+	},
+	{
+		"id": "location2",
+		"name": "Greenbay",
+		"address": "1734 N Orleans St, Chicago, IL 60614",
+		"map": "https://www.google.com/maps?q=1734+N+Orleans+St,+Chicago,+IL+60614,+USA&ftid=0x880fd34073f306a3:0x9e1726bbf8f23f0e"
+	},
+	{
+		"id": "location3",
+		"name": "Howard A Yeager",
+		"address": "2245 N Southport Ave, Chicago, IL 60614",
+		"map": "https://www.google.com/maps?q=2245+N+Southport+Ave,+Chicago,+IL+60614,+USA&ftid=0x880fd2e37f9b8d2d:0x62ad8b907dd755d6"
+	},
+	{
+		"id": "location4",
+		"name": "Marjorie P Hart",
+		"address": "2625 N Orchard St, Chicago, IL 60614",
+		"map": "https://www.google.com/maps?q=2625+N+Orchard+St,+Chicago,+IL+60614,+USA&ftid=0x880fd30f2630e551:0x3e719e44a5cef714"
+	},
+	{
+		"id": "location5",
+		"name": "North Elementary",
+		"address": "1409 N Ogden Ave, Chicago, IL 60610",
+		"map": "https://www.google.com/maps?q=1409+N+Ogden+Ave,+Chicago,+IL+60610,+USA&ftid=0x880fd33af13a8945:0xb6ad1ec2b6f379ba"
+	},
+	{
+		"id": "location6",
+		"name": "South Elementary",
+		"address": "2101 N Fremont St, Chicago, IL 60614",
+		"map": "https://www.google.com/maps?q=2101+N+Fremont+St,+Chicago,+IL+60614,+USA&ftid=0x880fd3196fb41dc7:0x970be7f7d6336df5"
+	}
+	],
+ 
+ "games":[
+	{
+		"teamA": "U1",
+		"teamB": "U4",
+		"date": "9/01",
+		"time": "9:30 a.m.",
+		"location": "AJ Katzenmaier"
+	},
+		{
+		"teamA": "U3",
+		"teamB": "U2",
+		"date": "9/01",
+		"time": "1:00 p.m.",
+		"location": "Greenbay"
+	}, 
+		{
+		"teamA": "U5",
+		"teamB": "U6",
+		"date": "9/08",
+		"time": "9:30 a.m.",
+		"location": "Howard A Yeager"
+	}, 
+			{
+		"teamA": "U6",
+		"teamB": "U1",
+		"date": "9/08",
+		"time": "1:00 p.m.",
+		"location": "Marjorie P Hart"
+	}, 
+			{
+		"teamA": "U",
+		"teamB": "U",
+		"date": "9/15",
+		"time": "9:30 a.m.",
+		"location": "North Elementary"
+	}, 
+			{
+		"teamA": "U",
+		"teamB": "U",
+		"date": "9/15",
+		"time": "1:00 p.m.",
+		"location": "AJ Katzenmaier"
+	}, 
+			{
+		"teamA": "U1",
+		"teamB": "U3",
+		"date": "9/22",
+		"time": "9:30 a.m.",
+		"location": "South Elementary"
+	}, 
+			{
+		"teamA": "U2",
+		"teamB": "U6",
+		"date": "9/22",
+		"time": "1:00 p.m.",
+		"location": "Howard A Yeager"
+	}, 
+			{
+		"teamA": "U4",
+		"teamB": "U5",
+		"date": "9/29",
+		"time": "9:30 a.m.",
+		"location": "Greenbay"
+	}, 
+			{
+		"teamA": "U2",
+		"teamB": "U5",
+		"date": "10/06",
+		"time": "9:30 a.m.",
+		"location": "Marjorie P Hart"
+	}, 
+			{
+		"teamA": "U1",
+		"teamB": "U6",
+		"date": "10/06",
+		"time": "1:00 p.m.",
+		"location": "South"
+	}, 
+			{
+		"teamA": "U3",
+		"teamB": "U4",
+		"date": "10/08",
+		"time": "9:30 a.m.",
+		"location": "Howard A Yeager"
+	}, 
+			{
+		"teamA": "U1",
+		"teamB": "U6",
+		"date": "10/08",
+		"time": "1:00 p.m.",
+		"location": "Greenbay"
+	}, 
+			{
+		"teamA": "U6",
+		"teamB": "U3",
+		"date": "10/20",
+		"time": "9:30 a.m.",
+		"location": "North Elementary"
+	}, 
+			{
+		"teamA": "U2",
+		"teamB": "U4",
+		"date": "10/20",
+		"time": "1:00 p.m.",
+		"location": "Marjorie P Hart"
+	}, 
+			{
+		"teamA": "U3",
+		"teamB": "U1",
+		"date": "10/27",
+		"time": "9:30 a.m.",
+		"location": "AJ Katzenmaier"
+	}, 
+			{
+		"teamA": "U5",
+		"teamB": "U6",
+		"date": "10/27",
+		"time": "1:00 p.m.",
+		"location": "Howard A Yeager"
+	}
+	 
+	 ]
+
+
+}
+

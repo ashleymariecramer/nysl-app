@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app="nyslApp">
 
 <head>
 <title>NYSL Game Schedule App</title>
@@ -27,14 +28,18 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <!-- my CSS -->
 <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+<!-- Angular JS -->
+<script src="JS/angular.js"></script>
+<script src="JS/app.js"></script>
 </head>
 
-<body>
+<body ng-controller="NyslController">
 	<div class="header"> <!-- start of header -->
 		<navbar>
 			<button name="back" class="back_button" type="type"><i class="fa fa-arrow-left back_icon"></i></button>
-			<h1>NYSL</h1>
 			<button name="home" class="home_button" type="type"><i class="fa fa-home home_icon"></i></button>
+			<h1>NYSL</h1>
+			<button name="signin" class="signin_button" type="type"><i class="fa fa-user user_icon"></i></button>
 		</navbar>
 
 		<header class="home">
@@ -201,18 +206,18 @@
 			<div class="buttonGroup">
 
 				<div class="buttonRow">
-					<button name="locationInfo" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>AJ<br>KATZENMAIER</h3></button>
-					<button name="locationInfo" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>GREEN<br>BAY</h3></button>
+					<button name="locationInfo" id="location1" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>AJ<br>KATZENMAIER</h3></button>
+					<button name="locationInfo" id="location2" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>GREEN<br>BAY</h3></button>
 				</div>
 
 				<div class="buttonRow">
-					<button name="locationInfo" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>HOWARD A YEAGER</h3></button>
-					<button name="locationInfo" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>MARJORIE P HART</h3></button>
+					<button name="locationInfo" id="location3" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>HOWARD A YEAGER</h3></button>
+					<button name="locationInfo" id="location4" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>MARJORIE P HART</h3></button>
 				</div>
 
 				<div class="buttonRow">
-					<button name="locationInfo" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>NORTH ELEMENTARY</h3></button>
-					<button name="locationInfo" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>SOUTH ELEMENTARY</h3></button>
+					<button name="locationInfo" id="location5" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>NORTH ELEMENTARY</h3></button>
+					<button name="locationInfo" id="location6" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>SOUTH ELEMENTARY</h3></button>
 				</div>
 
 			</div> <!-- end of buttonGroup -->
@@ -229,8 +234,8 @@
 		<div class="mainContent">
 			<div class="content">
 				<div class="text">
-					<h4><b>AJ KATZENMAIER</b></h4>
-					<p>1829 Kennedy Dr, North Chicago, IL 60088, USA</p>
+					<h4><b>GREENBAY</b></h4>
+					<p>116 Gawsworth Road</p>
 				</div>
 				<div id="map2" class="mainMap">
 				</div>
@@ -270,10 +275,10 @@
 		</div>
 	
 		<div class="mainContent">
-			<div class="content">
-			
+<!-- logged in view -->				  
+			<div class="content loggedIn">
 				<h4>LATEST MESSAGES</h4>
-				<div class="chat">
+				<div id="results" class="chat">
 					<p><b>Bob:</b> Outside Best Buy?</p>
 					<p><b>Jane:</b>  Great! Thanks Bob, where should we meet you?</p>
 					<p><b>Bob:</b>  Jane, if you can get to the Midtown Mall for 9am I can take you both.</p>
@@ -282,15 +287,66 @@
 				
 				<h4>POST NEW MESSAGE</h4>
 				<form>
-					<input type="text" name="name" id="name" placeholder="Name">
-					<input type="text" name="message" id="message" placeholder="Message">
-					<a href=""><button class="post" type="button"><h3><i class="fa fa-paper-plane"></i>  POST</h3></button></a>
+					<input id="username" type="email" name="name" id="name" placeholder="email">
+					<input id="text" type="text" name="message" id="message" placeholder="Message">
+					<button id="post" class="post" type="button"><h3><i class="fa fa-paper-plane"></i>  POST</h3></button>
 				</form>
 				
-			</div> <!-- end of content -->
+			</div> <!-- end of content (loggedIn ) -->
+
+	
+<!-- logged out view -->	
+			<div class="content loggedOut">
+				<div class="message">
+					<h4>You need to be logged in to see or post messages</h4>
+				</div>
+				
+				<form id="login-form" method="POST" action="" onsubmit="return false;">
+					<div class="form-group">
+						<input type="email" name="name" id="name" placeholder="Email">
+						<input type="text" name="name" id="name" placeholder="Password">
+					</div>
+					<div class="loginButtons">
+						<button type="submit" id="signup-btn" class="signup" type="button"><h3>SIGN UP</h3></button>
+						<button type="submit" id="login-btn" class="login" type="button"><h3>LOG IN</h3></button>
+					</div>
+			</div> <!-- end of content (loggedOut) -->
 		</div> <!-- end of mainContent -->
-		
+	
 	</div> <!-- end of messageBoard -->
+	
+	<div id="signin" class="page">
+	
+		<div class="title">
+			<h2>MY ACCOUNT</h2>
+		</div>
+	
+		<div class="mainContent">
+<!-- logged in view -->		
+			<div class="content loggedIn">	
+ 				<div class="message">
+ 					<h4>You are currently logged in as: name</h4>
+ 				</div>
+  			
+				<form id="login-form" method="POST" action="" onsubmit="return">
+				<button type="submit" id="logout-btn" class="signup" type="button"><h3>LOG OUT</h3></button>
+			</div> <!-- end of content(loggedIn)-->
+<!-- logged out view -->		
+			<div class="content loggedOut">	
+				<form id="login-form" method="POST" action="" onsubmit="return false;">
+					<div class="form-group">
+						<input type="email" name="name" id="name" placeholder="Email">
+						<input type="text" name="name" id="name" placeholder="Password">
+					</div>
+					<div class="loginButtons">
+						<button type="submit" id="signup-btn" class="signup" type="button"><h3>SIGN UP</h3></button>
+						<button type="submit" id="login-btn" class="login" type="button"><h3>LOG IN</h3></button>
+					</div>
+				</form>
+			</div> <!-- end of content(loggedOut)-->
+			
+	</div> <!-- end of signin -->
+		
 		
 	
 <!-- jQuery library -->
@@ -301,6 +357,7 @@
 <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
 <!-- My JS -->
 <script src="JS/main.js"></script>
+<!--<script src="JS/messages.js"></script>-->
 
 </body>
 </html>
