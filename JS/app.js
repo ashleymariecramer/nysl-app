@@ -9,14 +9,24 @@ nyslApp.controller('NyslController', function($scope, $http){
 	});
 	
 
-	$scope.locationName= "My location";
+	$scope.locationName = "My location";
 	$scope.locationAddress = "My address";
 	
-	//	$scope.showLocationInfo = function() { //this function will be stored when page is loaded but only executed when clicked on.
-									 
 	
 	
+	//$scope.showLocationId = function(event) { //this function will be stored when page is loaded but only executed when clicked on.
+		//console.log($(event.target).attr("id"));
+	//};
+
 	
+	$scope.fillLocationInfo = function(locations){
+		//$(".page").hide();
+		//$("#locationInfo").show();
+		$scope.locationName = "new location";
+    $scope.locationAddress = "new address";
+	};
+	
+  
 	
 	
 	

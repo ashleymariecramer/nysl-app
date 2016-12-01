@@ -1,0 +1,78 @@
+	<!--<div id="messageBoard" class="page">
+	
+		<div class="title">
+			<h2>MESSAGE BOARD</h2>
+		</div>
+	
+		<div class="mainContent">
+<!-- logged in view -->				  
+			<div class="content loggedIn">
+				<h4>LATEST MESSAGES</h4>
+				<div id="results" class="chat">
+					<p><b>Bob:</b> Outside Best Buy?</p>
+					<p><b>Jane:</b>  Great! Thanks Bob, where should we meet you?</p>
+					<p><b>Bob:</b>  Jane, if you can get to the Midtown Mall for 9am I can take you both.</p>
+					<p><b>Jane:</b>  Does anyone have space in their car for my son &amp; I for the match Sat am?</p>
+				</div> 
+				
+				<h4>POST NEW MESSAGE</h4>
+				<form>
+					<input id="username" type="email" name="name" id="name" placeholder="email">
+					<input id="text" type="text" name="message" id="message" placeholder="Message">
+					<button id="post" class="post" type="button"><h3><i class="fa fa-paper-plane"></i>  POST</h3></button>
+				</form>
+				
+			</div> <!-- end of content (loggedIn ) -->
+
+	
+<!-- logged out view -->	
+			<div class="content loggedOut">
+				<div class="message">
+					<h4>You need to be logged in to see or post messages</h4>
+				</div>
+				
+				<form id="login-form" method="POST" action="" onsubmit="return false;">
+					<div class="form-group">
+						<input type="email" name="name" id="name" placeholder="Email">
+						<input type="text" name="name" id="name" placeholder="Password">
+					</div>
+					<div class="loginButtons">
+						<button type="submit" id="signup-btn" class="signup" type="button"><h3>SIGN UP</h3></button>
+						<button type="submit" id="login-btn" class="login" type="button"><h3>LOG IN</h3></button>
+					</div>
+			</div> <!-- end of content (loggedOut) -->
+		</div> <!-- end of mainContent -->
+	
+	</div> --> <!-- end of messageBoard --> 
+	
+	<div id="signin" class="page">
+	
+		<div class="title">
+			<h2>MY ACCOUNT</h2>
+		</div>
+	
+		<div class="mainContent">
+<!-- logged in view -->		
+			<div class="content loggedIn">	
+ 				<div class="message">
+ 					<h4>You are currently logged in as: name</h4>
+ 				</div>
+  			
+				<form id="login-form" method="POST" action="" onsubmit="return">
+				<button type="submit" id="logout-btn" class="signup" type="button"><h3>LOG OUT</h3></button>
+			</div> <!-- end of content(loggedIn)-->
+<!-- logged out view -->		
+			<div class="content loggedOut">	
+				<form id="login-form" method="POST" action="" onsubmit="return false;">
+					<div class="form-group">
+						<input type="email" name="name" id="name" placeholder="Email">
+						<input type="text" name="name" id="name" placeholder="Password">
+					</div>
+					<div class="loginButtons">
+						<button type="submit" id="signup-btn" class="signup" type="button"><h3>SIGN UP</h3></button>
+						<button type="submit" id="login-btn" class="login" type="button"><h3>LOG IN</h3></button>
+					</div>
+				</form>
+			</div> <!-- end of content(loggedOut)-->
+			
+	</div> <!-- end of signin -->

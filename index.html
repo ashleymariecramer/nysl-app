@@ -28,6 +28,18 @@
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <!-- my CSS -->
 <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDf2BYRA4995Du3Db8AO3uK9iGWhpUtsFI",
+    authDomain: "nysl-game-app.firebaseapp.com",
+    databaseURL: "https://nysl-game-app.firebaseio.com",
+    storageBucket: "nysl-game-app.appspot.com",
+    messagingSenderId: "69402279648"
+  };
+  firebase.initializeApp(config);
+</script>
 <!-- Angular JS -->
 <script src="JS/angular.js"></script>
 <script src="JS/app.js"></script>
@@ -36,10 +48,11 @@
 <body ng-controller="NyslController">
 	<div class="header"> <!-- start of header -->
 		<navbar>
-			<button name="back" class="back_button" type="type"><i class="fa fa-arrow-left back_icon"></i></button>
-			<button name="home" class="home_button" type="type"><i class="fa fa-home home_icon"></i></button>
+			<button name="back" class="back_button" type="type"><i class="fa fa-arrow-left"></i></button>
+			<button name="home" class="home_button" type="type"><i class="fa fa-home"></i></button>
 			<h1>NYSL</h1>
-			<button name="signin" class="signin_button" type="type"><i class="fa fa-user user_icon"></i></button>
+			<button name="" class="signin_button" id="sign-in-button" type="type"><i class="fa fa-sign-in"></i></button>
+			<button name="" class="signout_button"  id="sign-out-button" type="type"><i class="fa fa-sign-out"></i></button>
 		</navbar>
 
 		<header class="home">
@@ -100,8 +113,7 @@
 
 		</div> <!-- end of splitScreen -->
 	</div> <!-- end of nextGames -->
-
-
+	
 	<div id="allGames" class="page">
 	
 		<div class="title">
@@ -205,9 +217,16 @@
 		<div class="mainContent">
 			<div class="buttonGroup">
 
+	<!-- 	<div class="buttonRow">
+				  <button ng-repeat="location in locations" id="location{{$index}}"
+					class="sixButtons" type="button" name="locationInfo" ng-click="showLocationInfo('location{{$index}}')"><i class="fa fa-map-marker button_icons"></i><h3>
+					{{location.name}}</h3></button>
+				</div> -->
+				  
+		
 				<div class="buttonRow">
-					<button name="locationInfo" id="location1" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>AJ<br>KATZENMAIER</h3></button>
-					<button name="locationInfo" id="location2" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>GREEN<br>BAY</h3></button>
+					<button name="locationInfo" id="location1" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>AJ<br>KATZENMAIER</h3></button> 
+					<button ng-click="getLocationId($element.target)" name="locationInfo" data-id="location2" class="sixButtons" type="button"><i class="fa fa-map-marker button_icons"></i><h3>GREEN<br>BAY</h3></button>
 				</div>
 
 				<div class="buttonRow">
@@ -268,96 +287,138 @@
 		
 	</div> <!-- end of contacts -->
 
-	<div id="messageBoard" class="page">
-	
+	<div id="messageBoard" class="page"> <!-- start of Message Board -->
+		
 		<div class="title">
 			<h2>MESSAGE BOARD</h2>
 		</div>
-	
-		<div class="mainContent">
-<!-- logged in view -->				  
-			<div class="content loggedIn">
-				<h4>LATEST MESSAGES</h4>
-				<div id="results" class="chat">
-					<p><b>Bob:</b> Outside Best Buy?</p>
-					<p><b>Jane:</b>  Great! Thanks Bob, where should we meet you?</p>
-					<p><b>Bob:</b>  Jane, if you can get to the Midtown Mall for 9am I can take you both.</p>
-					<p><b>Jane:</b>  Does anyone have space in their car for my son &amp; I for the match Sat am?</p>
-				</div> 
-				
-				<h4>POST NEW MESSAGE</h4>
-				<form>
-					<input id="username" type="email" name="name" id="name" placeholder="email">
-					<input id="text" type="text" name="message" id="message" placeholder="Message">
-					<button id="post" class="post" type="button"><h3><i class="fa fa-paper-plane"></i>  POST</h3></button>
-				</form>
-				
-			</div> <!-- end of content (loggedIn ) -->
 
-	
-<!-- logged out view -->	
-			<div class="content loggedOut">
-				<div class="message">
-					<h4>You need to be logged in to see or post messages</h4>
+  	<!-- Splash screen 
+			<section id="page-splash">
+		   	<h2 class="logo">NYSL</h2>
+				<h3>Message Board</h3>
+				<div>
+					<button class="signInButton" id="sign-in-button"><i class="fa fa-sign-in"></i> Sign in with Google</button>
 				</div>
+			</section> -->
+
+    <!-- Navigation Bar Message Board -->
+    	<div class="mainContentOverflow">
+				<div class="messageHeader">
+					<div id="menu-recent" class="is-active messageBoardButtons">
+						<h2><i class="fa fa-exclamation-circle"></i></h2>
+						<h3>RECENT</h3>
+					</div>
+					<div id="menu-my-posts" class="messageBoardButtons">
+						<h2><i class="fa fa-user-circle-o"></i></h2>
+						<h3>MY POSTS</h3>
+					</div>
+					<div id="menu-all" class="messageBoardButtons">
+						<h2><i class="fa fa-plus-square"></i></h2>
+						<h3>ALL POSTS</h3>
+					</div>
+					<div id="add" class="messageBoardButtons">
+						<h2><i class="fa fa-pencil-square"></i></h2>
+						<h3>NEW POST</h3>
+					</div>
+					
+				</div> <!-- end of messagesHeader -->
+
+				<div class="overflowContent">
+					<!-- Write a new post -->
+					<section class="mdl-grid content" id="add-post" style="display:none">
+						<h2 class="mdl-card__title-text">New Post</h2>
+						<form id="message-form" action="#">
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<input class="mdl-textfield__input" type="text" id="new-post-title" placeholder="Post title...">
+								</div>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<textarea class="mdl-textfield__input" rows="5" id="new-post-message" placeholder="Write message..."></textarea>
+								</div>
+							<button id="post" class="post" type="submit"><h3><i class="fa fa-paper-plane"></i> POST</h3></button>
+							</form>
+						</section>
+
+						<!-- Show a list of recent posts -->
+						<section class="mdl-grid content" id="recent-posts-list" style="display:none">
+							<div class="posts-container">
+							</div>
+						</section>
+
+						<!-- Show the list of user's posts -->
+						<section class="mdl-grid content" id="user-posts-list" style="display:none">
+							<div class="posts-container">
+							</div>
+						</section>
+						
+						<!-- Show  when logged out -->
+						<section class="mdl-grid content" id="posts-hidden" style="display:none">
+							<div class="message">
+ 								<h4>You need to sign in to view and post messages</h4>
+ 							</div>
+						</section>
+					
+					</div>
+	
+
+			</div> <!-- end of mainContent -->
+ 		</div> <!-- end of messageBoard -->
 				
-				<form id="login-form" method="POST" action="" onsubmit="return false;">
-					<div class="form-group">
-						<input type="email" name="name" id="name" placeholder="Email">
-						<input type="text" name="name" id="name" placeholder="Password">
-					</div>
-					<div class="loginButtons">
-						<button type="submit" id="signup-btn" class="signup" type="button"><h3>SIGN UP</h3></button>
-						<button type="submit" id="login-btn" class="login" type="button"><h3>LOG IN</h3></button>
-					</div>
-			</div> <!-- end of content (loggedOut) -->
-		</div> <!-- end of mainContent -->
+	<div id="loggedIn" class="page">
 	
-	</div> <!-- end of messageBoard -->
-	
-	<div id="signin" class="page">
-	
-		<div class="title">
-			<h2>MY ACCOUNT</h2>
-		</div>
+			<div class="title">
+				<h2>MY ACCOUNT</h2>
+			</div>
 	
 		<div class="mainContent">
-<!-- logged in view -->		
+		
 			<div class="content loggedIn">	
  				<div class="message">
- 					<h4>You are currently logged in as: name</h4>
+ 					<h4>You are currently signed in with your Google account</h4>
  				</div>
   			
-				<form id="login-form" method="POST" action="" onsubmit="return">
-				<button type="submit" id="logout-btn" class="signup" type="button"><h3>LOG OUT</h3></button>
+				<div class="sign-out-button messageBoardButtons">
+						<h2><i class="fa fa-sign-out"></i></h2>
+						<h3>SIGN OUT</h3>
+				</div>
 			</div> <!-- end of content(loggedIn)-->
-<!-- logged out view -->		
-			<div class="content loggedOut">	
-				<form id="login-form" method="POST" action="" onsubmit="return false;">
-					<div class="form-group">
-						<input type="email" name="name" id="name" placeholder="Email">
-						<input type="text" name="name" id="name" placeholder="Password">
-					</div>
-					<div class="loginButtons">
-						<button type="submit" id="signup-btn" class="signup" type="button"><h3>SIGN UP</h3></button>
-						<button type="submit" id="login-btn" class="login" type="button"><h3>LOG IN</h3></button>
-					</div>
-				</form>
+ 		</div> <!-- end mainContent -->
+ 	</div> <!-- end of loggedIn -->
+ 	
+ 	<div id="loggedOut" class="page">
+	
+			<div class="title">
+				<h2>MY ACCOUNT</h2>
+			</div>
+	
+		<div class="mainContent">
+		
+			<div class="content loggedIn">	
+ 				<div class="message">
+ 					<h4>You need to sign in to view and post messages</h4>
+ 				</div>
+  			
+				<div class="sign-out-button messageBoardButtons">
+						<h2><i class="fa fa-sign-in"></i></h2>
+						<h3>SIGN OUT</h3>
+				</div>
 			</div> <!-- end of content(loggedOut)-->
-			
-	</div> <!-- end of signin -->
+ 		</div> <!-- end mainContent -->
+ 	</div> <!-- end of loggedOut -->
+ 	
+
+
 		
 		
 	
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- Font Awesome -->
-<script src="https://use.fontawesome.com/b55d83a6c7.js"></script>
-<!-- FireBase -->
-<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-<!-- My JS -->
-<script src="JS/main.js"></script>
-<!--<script src="JS/messages.js"></script>-->
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Font Awesome -->
+	<script src="https://use.fontawesome.com/b55d83a6c7.js"></script>
+	<!-- FireBase -->
+	<!-- My JS -->
+	<script src="JS/main.js"></script>
+	<script src="JS/chat.js"></script>
 
 </body>
 </html>

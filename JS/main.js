@@ -30,7 +30,6 @@ function showNextPage(){
 			if (this.name != "back") {  // need to exclude back button as this should not go to '#back'
 				var name = this.name;
 				allPages.unshift(name);
-				console.log(allPages);
 				window.location.hash = name; // this adds the location hash to the url
 				$('#' + name).show();
 				if (name === "gameInfo") {
@@ -44,7 +43,6 @@ function showNextPage(){
 								}
 			} 
 			else {  //if no last page in history show the home page
-					console.log(allPages);
 					if (allPages[0] === "home") {
 							$("#home").show();
 					} 
